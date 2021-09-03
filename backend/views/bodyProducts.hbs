@@ -29,21 +29,26 @@
                     </thead>
                     <tbody>
                             <tr>
-                                <td class="h4"> {{ list.title }} </td>
-                                <td style="font-size:13px"><b>$ {{ list.price }}</b></td>
-                                <td> <img style="width: 2rem;" src="{{ list.thumbnail }}"> </td>
+                                <td class="h4 pt-4"> {{ list.title }} </td>
+                                <td style="font-size:13px" class="pt-4"><b>$ {{ list.price }}</b></td>
+                                <td class="text-center"> <img style="width: 6rem;" src="{{ list.thumbnail }}"> </td>
                             </tr>
 
                             <tr>
                                 <td>{{ list.description }}</td>
                                 <td></td>
-                                <td></td>
+                                <td>
+                                    <form action="/api/carrito/1/productos/{{list.id}}" method="POST">
+                                        <button type="submit" class="btn bg-success text-white font-weight-bold">
+                                            Agregar al Carrito
+                                        </button>
+                                    </form>
+                                </td>
                             </tr>
                             <tr class="bg-light">
                                 <td><small class="text-muted">Última modificación: {{ list.time }}</small></td>
                                 <td></td>
                                 <td><small class="text-muted"><b>{{ list.stock }} uds.</b></small></td>
-
                             </tr>                            
                     </tbody>
                 </table>

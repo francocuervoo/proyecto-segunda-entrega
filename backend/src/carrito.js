@@ -5,6 +5,7 @@ class Carrito {
     this.fileName = fileName;
     this.id = 0;
     this.data = [];
+    this.time = new Date();
   }
 
   // Carrito Methods
@@ -13,6 +14,7 @@ class Carrito {
     await this.getAll();
     this.id++;
     cart.id = this.id;
+    cart.time = this.time;
     this.data.push(cart);
     try {
       await fs.promises.writeFile(
@@ -26,17 +28,16 @@ class Carrito {
     }
   }
 
-  async saveProduct(newProduct, idCart) {
+  async saveProduct(idCart, product) {
     await this.getAll();
     let cart = await this.getById(idCart);
-    cart.products.push(newProduct);
+    cart.products.push(product);
     try {
       await fs.promises.writeFile(
         this.fileName,
         JSON.stringify(this.data, null, 2)
       );
-      console.log("Ahora el carrito contiene estos productos", cart);
-      return cart; // Return id
+      return cart;
     } catch (error) {
       console.log(error);
     }

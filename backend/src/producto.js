@@ -1,14 +1,14 @@
 const fs = require("fs"); // Import module fs
 
-// Contenedor class
-class Contenedor {
+// Producto class
+class Producto {
   constructor(fileName) {
     this.fileName = fileName;
     this.id = 0;
     this.data = [];
     this.time = new Date();
   }
-  // Contenedor Methods
+  // Producto Methods
   async save(product) { // Save product
     await this.getAll();
     this.id++;
@@ -136,4 +136,4 @@ class Contenedor {
     }
   }
 }
-module.exports = Contenedor;
+module.exports = Producto;

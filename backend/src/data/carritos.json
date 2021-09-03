@@ -1,0 +1,224 @@
+[
+  {
+    "time": "2011-07-12T03:00:00.000Z",
+    "products": [
+      {
+        "title": "Celular Samsung Galaxy S20FE 128 GB Azul",
+        "description": "descripcion",
+        "code": "XA09",
+        "thumbnail": "https://images.fravega.com/s500/83a0a11263c7f4db3e7008b315a03f65.jpg",
+        "price": "74999",
+        "time": "2011-07-12T03:00:00.000Z",
+        "stock": 2,
+        "id": 2
+      },
+      {
+        "title": "Celular Samsung Galaxy S20FE 128 GB Azul",
+        "description": "descripcion",
+        "code": "XA09",
+        "thumbnail": "https://images.fravega.com/s500/83a0a11263c7f4db3e7008b315a03f65.jpg",
+        "price": "74999",
+        "time": "2011-07-12T03:00:00.000Z",
+        "stock": 2,
+        "id": 2
+      },
+      {
+        "title": "Celular Samsung Galaxy S20FE 128 GB Azul",
+        "description": "descripcion",
+        "code": "XA09",
+        "thumbnail": "https://images.fravega.com/s500/83a0a11263c7f4db3e7008b315a03f65.jpg",
+        "price": "74999",
+        "time": "2011-07-12T03:00:00.000Z",
+        "stock": 2,
+        "id": 2
+      },
+      {
+        "title": "Celular Samsung Galaxy S20FE 128 GB Azul",
+        "description": "descripcion",
+        "code": "XA09",
+        "thumbnail": "https://images.fravega.com/s500/83a0a11263c7f4db3e7008b315a03f65.jpg",
+        "price": "74999",
+        "time": "2011-07-12T03:00:00.000Z",
+        "stock": 2,
+        "id": 2
+      }
+    ],
+    "id": 1
+  },
+  {
+    "time": "2011-07-12T03:00:00.000Z",
+    "products": [
+      {
+        "title": "Aire Acondicionado Split Frío/Calor Carrier 4300FC 5000W 53HFA1801E",
+        "price": "79999",
+        "thumbnail": "https://images.fravega.com/s500/c689af7b575f5881c219ff18f1166e11.jpg",
+        "stock": "20",
+        "description": "El split frío/calor Carrier tiene 4300 frigorías y 5000 watts de potencia. Para elegir el equipo adecuado, hay que tener en cuenta los metros cuadrados de la habitación donde va a instalarse. Además, la orientación de la casa/depto; la cantidad de personas que usan la habitación; el número de ventanas y la cantidad aparatos eléctricos que hay.",
+        "code": "AA01",
+        "id": 1,
+        "time": "2021-09-03T16:25:47.727Z"
+      },
+      {
+        "title": "Aire Acondicionado Split Frío/Calor Carrier 4300FC 5000W 53HFA1801E",
+        "price": "79999",
+        "thumbnail": "https://images.fravega.com/s500/c689af7b575f5881c219ff18f1166e11.jpg",
+        "stock": "20",
+        "description": "El split frío/calor Carrier tiene 4300 frigorías y 5000 watts de potencia. Para elegir el equipo adecuado, hay que tener en cuenta los metros cuadrados de la habitación donde va a instalarse. Además, la orientación de la casa/depto; la cantidad de personas que usan la habitación; el número de ventanas y la cantidad aparatos eléctricos que hay.",
+        "code": "AA01",
+        "id": 1,
+        "time": "2021-09-03T16:25:47.727Z"
+      },
+      {
+        "title": "Aire Acondicionado Split Frío/Calor Carrier 4300FC 5000W 53HFA1801E",
+        "price": "79999",
+        "thumbnail": "https://images.fravega.com/s500/c689af7b575f5881c219ff18f1166e11.jpg",
+        "stock": "20",
+        "description": "El split frío/calor Carrier tiene 4300 frigorías y 5000 watts de potencia. Para elegir el equipo adecuado, hay que tener en cuenta los metros cuadrados de la habitación donde va a instalarse. Además, la orientación de la casa/depto; la cantidad de personas que usan la habitación; el número de ventanas y la cantidad aparatos eléctricos que hay.",
+        "code": "AA01",
+        "id": 1,
+        "time": "2021-09-03T16:25:47.727Z"
+      }
+    ],
+    "id": 2
+  },
+  {
+    "time": "2011-07-12T03:00:00.000Z",
+    "products": [
+      {
+        "title": "Celular Samsung Galaxy S20FE 128 GB Azul",
+        "description": "descripcion",
+        "code": "XA09",
+        "thumbnail": "https://images.fravega.com/s500/83a0a11263c7f4db3e7008b315a03f65.jpg",
+        "price": "74999",
+        "time": "2011-07-12T03:00:00.000Z",
+        "stock": 2,
+        "id": 2
+      },
+      {
+        "title": "Celular Samsung Galaxy S20FE 128 GB Azul",
+        "description": "descripcion",
+        "code": "XA09",
+        "thumbnail": "https://images.fravega.com/s500/83a0a11263c7f4db3e7008b315a03f65.jpg",
+        "price": "74999",
+        "time": "2011-07-12T03:00:00.000Z",
+        "stock": 2,
+        "id": 2
+      },
+      {
+        "title": "Celular Samsung Galaxy S20FE 128 GB Azul",
+        "description": "descripcion",
+        "code": "XA09",
+        "thumbnail": "https://images.fravega.com/s500/83a0a11263c7f4db3e7008b315a03f65.jpg",
+        "price": "74999",
+        "time": "2011-07-12T03:00:00.000Z",
+        "stock": 2,
+        "id": 2
+      },
+      {
+        "title": "Celular Samsung Galaxy S20FE 128 GB Azul",
+        "description": "descripcion",
+        "code": "XA09",
+        "thumbnail": "https://images.fravega.com/s500/83a0a11263c7f4db3e7008b315a03f65.jpg",
+        "price": "74999",
+        "time": "2011-07-12T03:00:00.000Z",
+        "stock": 2,
+        "id": 2
+      }
+    ],
+    "id": 3
+  },
+  {
+    "time": "2011-07-12T03:00:00.000Z",
+    "products": [
+      {
+        "title": "Celular Samsung Galaxy S20FE 128 GB Azul",
+        "description": "descripcion",
+        "code": "XA09",
+        "thumbnail": "https://images.fravega.com/s500/83a0a11263c7f4db3e7008b315a03f65.jpg",
+        "price": "74999",
+        "time": "2011-07-12T03:00:00.000Z",
+        "stock": 2,
+        "id": 2
+      },
+      {
+        "title": "Celular Samsung Galaxy S20FE 128 GB Azul",
+        "description": "descripcion",
+        "code": "XA09",
+        "thumbnail": "https://images.fravega.com/s500/83a0a11263c7f4db3e7008b315a03f65.jpg",
+        "price": "74999",
+        "time": "2011-07-12T03:00:00.000Z",
+        "stock": 2,
+        "id": 2
+      },
+      {
+        "title": "Celular Samsung Galaxy S20FE 128 GB Azul",
+        "description": "descripcion",
+        "code": "XA09",
+        "thumbnail": "https://images.fravega.com/s500/83a0a11263c7f4db3e7008b315a03f65.jpg",
+        "price": "74999",
+        "time": "2011-07-12T03:00:00.000Z",
+        "stock": 2,
+        "id": 2
+      },
+      {
+        "title": "Celular Samsung Galaxy S20FE 128 GB Azul",
+        "description": "descripcion",
+        "code": "XA09",
+        "thumbnail": "https://images.fravega.com/s500/83a0a11263c7f4db3e7008b315a03f65.jpg",
+        "price": "74999",
+        "time": "2011-07-12T03:00:00.000Z",
+        "stock": 2,
+        "id": 2
+      }
+    ],
+    "id": 4
+  },
+  {
+    "products": [
+      {
+        "title": "Celular Samsung Galaxy S20FE 128 GB Azul",
+        "description": "descripcion",
+        "code": "XA09",
+        "thumbnail": "https://images.fravega.com/s500/83a0a11263c7f4db3e7008b315a03f65.jpg",
+        "price": "74999",
+        "time": "2011-07-12T03:00:00.000Z",
+        "stock": 2,
+        "id": 2
+      }
+    ],
+    "id": 5,
+    "time": "2021-09-03T20:04:00.628Z"
+  },
+  {
+    "products": [
+      {
+        "title": "Celular Samsung Galaxy S20FE 128 GB Azul",
+        "description": "descripcion",
+        "code": "XA09",
+        "thumbnail": "https://images.fravega.com/s500/83a0a11263c7f4db3e7008b315a03f65.jpg",
+        "price": "74999",
+        "time": "2011-07-12T03:00:00.000Z",
+        "stock": 2,
+        "id": 2
+      }
+    ],
+    "id": 6,
+    "time": "2021-09-03T20:04:17.747Z"
+  },
+  {
+    "products": [
+      {
+        "title": "Celular Samsung Galaxy S20FE 128 GB Azul",
+        "description": "descripcion",
+        "code": "XA09",
+        "thumbnail": "https://images.fravega.com/s500/83a0a11263c7f4db3e7008b315a03f65.jpg",
+        "price": "74999",
+        "time": "2011-07-12T03:00:00.000Z",
+        "stock": 2,
+        "id": 2
+      }
+    ],
+    "id": 7,
+    "time": "2021-09-03T20:04:21.280Z"
+  }
+]
