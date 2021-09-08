@@ -65,7 +65,6 @@ class Carrito {
       return null;
     }
   }  
-
   
   async getAll() { // Get all cart   
     try {
@@ -101,6 +100,13 @@ class Carrito {
       console.log(error)
     }
   }  
+
+  async updateById(idCart, idProduct) {
+    let lista = await this.getAll();
+    const index = lista.findIndex(cart => cart.products.id == idCart);
+    let resultCarrito = lista.splice(index, 0);
+    console.log(resultCarrito)
+  }
 
 }
 

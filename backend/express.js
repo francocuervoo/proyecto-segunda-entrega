@@ -12,6 +12,10 @@ server.listen(PORT, () => {
   );
 });
 
+// Cors
+var cors = require('cors');
+app.use(cors());
+
 // Producto Class - One instance for products and one for messages
 const Producto = require("./src/producto.js");
 const Carrito = require("./src/carrito.js");
@@ -110,9 +114,7 @@ router.delete("/carrito/:id", async (req, res) => {
     const borrado = await contCarritos.deleteById(id);
     res.status(200).send({ borrado });
   } else {
-    res
-      .status(400)
-      .json({ error: "El carrito que intenta borrar no existe." });
+    res.status(400).json({ error: "El carrito que intenta borrar no existe." });
   }
 });
 
@@ -130,7 +132,7 @@ router.post("/carrito/:id/productos/:id_prod", async (req, res) => {
 });
 
 router.delete("/carrito/:id/productos/:id_prod", async (req, res) => {
-  const { id } = req.params;
+  /*const { id } = req.params;
   const { id_prod } = req.params;
   let cartExist = await contCarritos.getById(id);
   let prodExist = await contProductos.getById(id_prod);
@@ -138,6 +140,12 @@ router.delete("/carrito/:id/productos/:id_prod", async (req, res) => {
     // FALTA CREAR UNA FUNCIÓN QUE ELIMINE EL PRODUCTO DE UN CARRITO
     res.status(200).send({ borrado });
   } else {
-    res.status(400).json({ error: "El producto del carrito que intenta borrar no existe." });
-  }
+    res
+      .status(400)
+      .json({ error: "El producto del carrito que intenta borrar no existe." });
+  }*/
+  const { id } = req.params;
+  const { id_prod } = req.params;
+  let result = await contCarritos.updateById(id , id_prod);
+  res.status(200).send({ result });  
 });
