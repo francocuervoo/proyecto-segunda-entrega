@@ -41,20 +41,20 @@ class Carrito {
     } catch (error) {
       console.log(error);
     }
-  }  
+  }
 
-  async saveList(nuevaLista){ // Guardo lista
-    try{
-      await fs.promises.writeFile(this.fileName, nuevaLista) // Save file JSON
-      console.log('El archivo fue guardado con éxito.');
-      
-    }
-    catch (error){
-      console.log(error)
+  async saveList(nuevaLista) {
+    // Guardo lista
+    try {
+      await fs.promises.writeFile(this.fileName, nuevaLista); // Save file JSON
+      console.log("El archivo fue guardado con éxito.");
+    } catch (error) {
+      console.log(error);
     }
   }
 
-  async getById(id) { // Get cart by id
+  async getById(id) {
+    // Get cart by id
     await this.getAll();
     try {
       const objetoId = this.data.find((dat) => dat.id == id); // Search object id
@@ -64,9 +64,10 @@ class Carrito {
     } catch (error) {
       return null;
     }
-  }  
-  
-  async getAll() { // Get all cart   
+  }
+
+  async getAll() {
+    // Get all cart
     try {
       const data = await fs.promises.readFile(this.fileName, "utf-8");
       if (data) {
@@ -81,7 +82,8 @@ class Carrito {
     }
   }
 
-  async deleteById(id) { //Delete cart by id
+  async deleteById(id) {
+    //Delete cart by id
     try {
       const data = await fs.promises.readFile(this.fileName, "utf-8");
       if (data) {
@@ -94,20 +96,34 @@ class Carrito {
           JSON.stringify(objetoSinId, null, 2)
         );
         console.log(`El carrito con el id ${id} fue eliminado.`);
-        return id
+        return id;
       }
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
-  }  
-
-  async updateById(idCart, idProduct) {
-    let lista = await this.getAll();
-    const index = lista.findIndex(cart => cart.products.id == idCart);
-    let resultCarrito = lista.splice(index, 0);
-    console.log(resultCarrito)
   }
 
+  async deleteProductOnCart(idCart, idProduct) {
+    try {
+      const carritos = await fs.promises.readFile(this.fileName, "utf-8");
+      if (carritos) {
+        this.carritos = JSON.parse(carritos); // carritos to object
+        const objectWithoutProduct = this.carritos.filter(
+          (dat) => dat.products.idCart != idProduct
+        );
+        await fs.promises.writeFile(
+          this.fileName,
+          JSON.stringify(objectWithoutProduct, null, 2)
+        );
+        console.log(
+          `El producto con el id ${idProduct} fue eliminado del carrito con id ${idCart}.`
+        );
+        return idCart;
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  }
 }
 
 module.exports = Carrito;

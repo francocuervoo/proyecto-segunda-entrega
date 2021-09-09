@@ -146,6 +146,6 @@ router.delete("/carrito/:id/productos/:id_prod", async (req, res) => {
   }*/
   const { id } = req.params;
   const { id_prod } = req.params;
-  let result = await contCarritos.updateById(id , id_prod);
+  let result = await contCarritos.deleteProductOnCart(id , id_prod);
   res.status(200).send({ result });  
 });
