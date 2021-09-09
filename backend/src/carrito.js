@@ -106,10 +106,10 @@ class Carrito {
   async deleteProductOnCart(idCart, idProduct) {
     try {
       const carritos = await fs.promises.readFile(this.fileName, "utf-8");
-      if (carritos) {
+      if (carritos.forEach(cart => cart.id == idCart)) {
         this.carritos = JSON.parse(carritos); // carritos to object
         const objectWithoutProduct = this.carritos.filter(
-          (dat) => dat.products.idCart != idProduct
+          (dat) => dat.products.id != idProduct
         );
         await fs.promises.writeFile(
           this.fileName,
