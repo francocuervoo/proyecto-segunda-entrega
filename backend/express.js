@@ -132,20 +132,8 @@ router.post("/carrito/:id/productos/:id_prod", async (req, res) => {
 });
 
 router.delete("/carrito/:id/productos/:id_prod", async (req, res) => {
-  /*const { id } = req.params;
-  const { id_prod } = req.params;
-  let cartExist = await contCarritos.getById(id);
-  let prodExist = await contProductos.getById(id_prod);
-  if (cartExist && prodExist) {
-    // FALTA CREAR UNA FUNCIÓN QUE ELIMINE EL PRODUCTO DE UN CARRITO
-    res.status(200).send({ borrado });
-  } else {
-    res
-      .status(400)
-      .json({ error: "El producto del carrito que intenta borrar no existe." });
-  }*/
   const { id } = req.params;
   const { id_prod } = req.params;
-  let result = await contCarritos.deleteProductOnCart(id , id_prod);
+  let result = await contCarritos.deleteProductFromCart(id , id_prod);
   res.status(200).send({ result });  
 });

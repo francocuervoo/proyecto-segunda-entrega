@@ -72,9 +72,9 @@ class Carrito {
       const data = await fs.promises.readFile(this.fileName, "utf-8");
       if (data) {
         this.data = JSON.parse(data); // Data to object
-        this.data.map((carrito) => {
+        /*this.data.map((carrito) => {
           if (this.id < carrito.id) this.id = carrito.id; // Nax id in the file
-        });
+        });*/
         return this.data;
       }
     } catch (error) {
@@ -103,26 +103,25 @@ class Carrito {
     }
   }
 
-  async deleteProductOnCart(idCart, idProduct) {
-    try {
-      const carritos = await fs.promises.readFile(this.fileName, "utf-8");
-      if (carritos.forEach(cart => cart.id == idCart)) {
-        this.carritos = JSON.parse(carritos); // carritos to object
-        const objectWithoutProduct = this.carritos.filter(
-          (dat) => dat.products.id != idProduct
-        );
-        await fs.promises.writeFile(
-          this.fileName,
-          JSON.stringify(objectWithoutProduct, null, 2)
-        );
-        console.log(
-          `El producto con el id ${idProduct} fue eliminado del carrito con id ${idCart}.`
-        );
-        return idCart;
-      }
-    } catch (error) {
-      console.log(error);
+  async deleteProductFromCart(idCart, idProduct) {
+    const carts = await this.getAll();
+    const cartFound = await this.getById(idCart);
+
+    if (!cartFound) {
+      return "No se encontró un carrito con ese ID";
     }
+
+    const updateCartProducts = cartFound.products.filter(
+      (product) => product.id != idProduct
+    );
+
+    const index = carts.findIndex((cart) => cart.id == idCart);
+
+    carts[index].products = updateCartProducts;
+
+    const cartsUpdate = JSON.stringify(carts, null, 2);
+    await this.saveList(cartsUpdate);
+    return "Carrito actualizado"
   }
 }
 
