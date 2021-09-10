@@ -38,5 +38,65 @@
     "code": "XX00",
     "id": 6,
     "time": "2021-09-08T16:16:58.682Z"
+  },
+  {
+    "title": "Test JOI",
+    "price": "1234",
+    "thumbnail": "https://images.fravega.com/s500/c689af7b575f5881c219ff18f1166e11.jpg",
+    "stock": "10",
+    "description": "Test para ver si funciona el JOI.",
+    "code": "JOI01",
+    "id": 7,
+    "time": "2021-09-10T17:43:43.979Z"
+  },
+  {
+    "title": "Test JOI",
+    "price": "1234",
+    "thumbnail": "https://images.fravega.com/s500/c689af7b575f5881c219ff18f1166e11.jpg",
+    "stock": "10",
+    "description": "Test para ver si funciona el JOI.",
+    "code": "JOI01",
+    "id": 8,
+    "time": "2021-09-10T17:43:47.889Z"
+  },
+  {
+    "title": "Test JOI",
+    "price": "1234",
+    "thumbnail": "https://images.fravega.com/s500/c689af7b575f5881c219ff18f1166e11.jpg",
+    "stock": "10",
+    "description": "Test para ver si funciona el JOI.",
+    "code": "JOI01",
+    "id": 9,
+    "time": "2021-09-10T17:45:42.248Z"
+  },
+  {
+    "title": "Test JOI",
+    "price": "1234",
+    "thumbnail": "https://images.fravega.com/s500/c689af7b575f5881c219ff18f1166e11.jpg",
+    "stock": "10",
+    "description": "Test para ver si funciona el JOI.",
+    "code": "JOI01",
+    "id": 10,
+    "time": "2021-09-10T17:45:47.586Z"
+  },
+  {
+    "title": "Test JOI",
+    "price": "1234",
+    "thumbnail": "https://images.fravega.com/s500/c689af7b575f5881c219ff18f1166e11.jpg",
+    "stock": "10",
+    "description": "Test para ver si funciona el JOI.",
+    "code": "JOI01",
+    "id": 11,
+    "time": "2021-09-10T17:51:27.412Z"
+  },
+  {
+    "title": "Test JOI",
+    "price": "1234",
+    "thumbnail": "https://images.fravega.com/s500/c689af7b575f5881c219ff18f1166e11.jpg",
+    "stock": "10",
+    "description": "Test para ver si funciona el JOI.",
+    "code": "JOI01",
+    "id": 12,
+    "time": "2021-09-10T17:51:46.458Z"
   }
 ]

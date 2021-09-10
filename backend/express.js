@@ -12,6 +12,9 @@ server.listen(PORT, () => {
   );
 });
 
+// Validator
+const validateAdmin = require('./src/validator')
+
 // Cors
 var cors = require('cors');
 app.use(cors());
@@ -52,13 +55,13 @@ router.get("/productos/:id", async (req, res) => {
   }
 });
 
-router.post("/productos", async (req, res) => {
+router.post("/productos", validateAdmin, async (req, res) => {
   const { body } = req;
   await contProductos.save(body);
   res.status(200).json({ mensaje: "Producto agregado con éxito." });
 });
 
-router.put("/productos/:id", async (req, res) => {
+router.put("/productos/:id", validateAdmin, async (req, res) => {
   const {
     body,
     params: { id },
@@ -72,7 +75,7 @@ router.put("/productos/:id", async (req, res) => {
   }
 });
 
-router.delete("/productos/:id", async (req, res) => {
+router.delete("/productos/:id", validateAdmin, async (req, res) => {
   const { id } = req.params;
   const productExist = await contProductos.getById(id);
   if (productExist) {
