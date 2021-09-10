@@ -98,5 +98,15 @@
     "code": "JOI01",
     "id": 12,
     "time": "2021-09-10T17:51:46.458Z"
+  },
+  {
+    "title": "Test JOI",
+    "price": "1234",
+    "thumbnail": "https://images.fravega.com/s500/c689af7b575f5881c219ff18f1166e11.jpg",
+    "stock": "10",
+    "description": "Test para ver si funciona el JOI.",
+    "code": "JOI01",
+    "id": 13,
+    "time": "2021-09-10T19:22:09.448Z"
   }
 ]
