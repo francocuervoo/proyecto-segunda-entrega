@@ -13,6 +13,5 @@ productsRouter.post("/", validateAdmin, productsControllers.saveProduct);
 
 export default productsRouter;
 
-//productsRouter.post("/", /*validateAdmin,*/ productsControllers.saveProduct);
 //productsRouter.delete("/:id", /*validateAdmin,*/ productsControllers.deleteProduct);
 //productsRouter.put("/:id", /*validateAdmin,*/ productsControllers.updateProduct);

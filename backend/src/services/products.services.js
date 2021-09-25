@@ -8,19 +8,39 @@ class ProductServices extends Services {
   }
 
   async getProducts() {
-    await this.getAll();
+    try {
+      const products = await this.getAll();
+      return products;
+    } catch (error) {
+      clog(error);
+    }
   }
 
   async getProductById(id) {
-    await this.getById(id);
+    try {
+      const product = await this.getById(id);
+      return product;
+    } catch (error) {
+      clog(error);
+    }
   }
 
   async createProduct(product) {
-    await this.createDocument(product);
+    try {
+      const newProduct = this.createDocument(product);
+      return newProduct;
+    } catch (error) {
+      clog(error);
+    }
   }
 
   async deleteProductById(id) {
-    await this.deleteById(id);
+    try {
+      await this.deleteById(id);
+      return;
+    } catch (error) {
+      clog(error);
+    }
   }
 
   async updateProductById(id, product) {
