@@ -1,14 +1,14 @@
-async function validateAdmin(req, res, next) {
-  const { headers } = req;
-  try {
-    if(headers.admin == 'true'){
-        next();
-    } else {
-        throw new Error("Error")
-    }
-  } catch (error) {
-    next(error);
-  }
-}
+// async function validateAdmin(req, res, next) {
+//   const { headers } = req;
+//   try {
+//     if(headers.admin == 'true'){
+//         next();
+//     } else {
+//         throw new Error("Error")
+//     }
+//   } catch (error) {
+//     next(error);
+//   }
+// }
 
-module.exports = validateAdmin;
+// module.exports = validateAdmin;
