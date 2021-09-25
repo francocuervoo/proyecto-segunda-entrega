@@ -1,5 +1,5 @@
 import { clog } from "../server.js";
-import Services from "./all.services.js";
+import Services from "./crud.services.js";
 
 // Métodos genéricos y los métidos propipios de los productos
 class CartServices extends Services {
@@ -7,7 +7,7 @@ class CartServices extends Services {
     super(model);
   }
 
-  async getPCarts() {
+  async getCarts() {
     await this.getAll();
   }
 
@@ -29,7 +29,7 @@ class CartServices extends Services {
 
       //Métodos de Vnailla JS para borrar el producto del carrito
       const index = cart.products.findIndex(
-        (product) => (product._id = productId)
+        (product) => (product._id == productId)
       );
       cart.products.splice(index, 1);
 

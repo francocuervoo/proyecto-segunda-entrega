@@ -1,15 +1,17 @@
 import { clog } from "../server.js";
 
 // Importo las subclases
-import CartServices from "../services/cart.services.js";
+import CartServices from "../services/carts.services.js";
 import ProductServices from "../services/products.services.js";
 
 // Importo los modelos
 import { cartModel } from "../models/cart.models.js";
 import { productModel } from "../models/product.model.js";
 
-const cartServices = new CartServices(cartModel);
+
+// Instancio las clases pasándole los modelos de Mongoose como parámetros
 const productServices = new ProductServices(productModel);
+const cartServices = new CartServices(cartModel);
 
 export const newCart = async (req, res) => {
   try {
@@ -77,4 +79,5 @@ export const addProductToCart = async (req, res) => {
   }
 };
 
+// Fata getProductsInCart()
 // Falta deleteProductFromCart()

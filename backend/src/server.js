@@ -6,26 +6,23 @@ import app from "./express.app.js";
 import dotenv from "dotenv";
 dotenv.config();
 
-const port = process.env.PORT;
-const mongoUri = process.env.MONGODB_URI_LOCAL;
+const { PORT, MONGODB_URI } = process.env;
 
 // Express Server
-app.listen(port, () => clog(`Servicio activo en el puerto ${port}`));
+app.listen(PORT, () => clog(`Servicio activo en el puerto http://localhost:${PORT}`));
 
 //  Conecto a MongoDB
-try {
-  const conectado = await mongoose.connect(
-    mongoUri,
-    {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
+mongoose.connect(
+  MONGODB_URI,
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  },
+  (error) => {
+    if (!error) {
+      clog("Conectado a MongoDB");
+    } else {
+      clog(error);
     }
-  )
-  if(conectado){
-    clog("Conectado a MongoDB")
-  } else {
-    clog("Error al conectar a MongoDB")
   }
-} catch(error){
-  { clog(error)}
-}
+);

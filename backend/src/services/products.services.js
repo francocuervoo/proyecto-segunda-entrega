@@ -1,5 +1,5 @@
 import { clog } from "../server.js";
-import Services from "./all.services.js";
+import Services from "./crud.services.js";
 
 // Métodos genéricos y los métidos propipios de los productos
 class ProductServices extends Services {
