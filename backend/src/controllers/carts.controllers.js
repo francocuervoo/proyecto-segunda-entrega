@@ -13,8 +13,9 @@ const cartServices = new CartServices(cartModel);
 const productServices = new ProductServices(productModel);
 
 export const newCart = async (req, res) => {
+  const {body} = req;
   try {
-    const cart = await cartServices.createCart();
+    const cart = await cartServices.createCart(body);
     res.status(200).send(`Carrito creado con ID: ${cart._id}`);
   } catch (error) {
     clog(error);
@@ -93,17 +94,11 @@ export const getProductsInCart = async (req, res) => {
 export const deleteProductFromCart = async (req, res) => {
   const { cartId, productId } = req.params;
   try {
-    const carts = await cartServices.getCarts();
-    const cartFound = await cartServices.getCartById(cartId);
-
-    if (!cartFound) {
-      res.send("No se encontró ningún carrito con ese ID");
+    const deleteProduct = await cartServices.deleteProduct(cartId, productId);
+    if (deleteProduct) {
+      res.status(200).send("El producto fue eliminado del carrito");
     } else {
-      const updateCartProducts = cartFound.products.filter(
-        (product) => product.id != productId
-      )
-
-
+      res.send("El carrito y/o el producto no existen");
     }
   } catch (error) {
     clog(error);

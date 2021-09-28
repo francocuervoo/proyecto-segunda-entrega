@@ -55,8 +55,8 @@ class CartServices extends Services {
 
   async deleteCartById(id) {
     try {
-      await this.deleteById(id);
-      return;
+      const deleteCart = await this.deleteById(id);
+      return deleteCart;
     } catch (error) {
       {
         clog(error);

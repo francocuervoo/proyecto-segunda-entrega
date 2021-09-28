@@ -24,7 +24,6 @@ export const getProducts = async (req, res) => {
   } else {
     try {
       const products = await productServices.getProducts();
-      console.log(products);
       res.status(200).send(products);
     } catch (error) {
       clog(error);
