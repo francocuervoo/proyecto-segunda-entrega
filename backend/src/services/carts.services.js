@@ -9,7 +9,7 @@ class CartServices extends Services {
 
   async getCarts() {
     try {
-      carts = await this.getAll();
+      const carts = await this.getAll();
       return carts;
     } catch (error) {
       {
@@ -20,7 +20,7 @@ class CartServices extends Services {
 
   async getCartById(id) {
     try {
-      cart = await this.getById(id);
+      const cart = await this.getById(id);
       return cart;
     } catch (error) {
       {
@@ -29,16 +29,29 @@ class CartServices extends Services {
     }
   }
 
-  async createCart(cart) {
+  createCart = async (cart) => await this.createDocument(cart);
+
+  /*async createCart(cart) {
     try {
-      await this.createDocument(cart);
-      return;
+      const document = await this.createDocument(cart);
+      return document;
     } catch (error) {
       {
         clog(error);
       }
     }
-  }
+  }*/
+
+  /*async createCart(cart) {
+    try {
+      const document = this.createDocument(cart);
+      return document;
+    } catch (error) {
+      {
+        clog(error);
+      }
+    }
+  }*/
 
   async deleteCartById(id) {
     try {
