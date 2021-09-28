@@ -10,8 +10,8 @@ import { productModel } from "../models/product.model.js";
 
 
 // Instancio las clases pasándole los modelos de Mongoose como parámetros
-const productServices = new ProductServices(productModel);
 const cartServices = new CartServices(cartModel);
+const productServices = new ProductServices(productModel);
 
 export const newCart = async (req, res) => {
   try {
@@ -79,5 +79,14 @@ export const addProductToCart = async (req, res) => {
   }
 };
 
-// Fata getProductsInCart()
-// Falta deleteProductFromCart()
+
+export const getProductsInCart = async (req, res) => {
+
+
+}
+
+export const deleteProductFromCart = async (req, res) => {
+
+
+}
+

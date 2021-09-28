@@ -55,7 +55,7 @@ class ProductServices extends Services {
         thumbnail,
       });
 
-      const updated = await productModel.findById(id);
+      const updated = await this.model.findById(id);
 
       return updated;
     } catch (error) {

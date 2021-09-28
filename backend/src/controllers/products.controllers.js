@@ -24,7 +24,7 @@ export const getProducts = async (req, res) => {
   } else {
     try {
       const products = await productServices.getProducts();
-      console.log(products)
+      console.log(products);
       res.status(200).send(products);
     } catch (error) {
       clog(error);
@@ -34,9 +34,32 @@ export const getProducts = async (req, res) => {
 
 export const saveProduct = async (req, res) => {
   const { body } = req;
-  await productServices.createProduct(body);
-
-  res.send("El producto fue agregado con éxito");
+  try {
+    await productServices.createProduct(body);
+    res.send("El producto fue agregado con éxito");
+  } catch (error) {
+    clog(error);
+  }
 };
 
-// Faltan otras funciones
+export const deleteProduct = async (req, res) => {
+  const { id } = req.params;
+  try {
+    await productServices.deleteById(id);
+    res.send(`El producto con el id: ${id} fue borrado`);
+  } catch (error) {
+    clog(error);
+  }
+};
+
+export const updateProduct = async (req, res) => {
+  const { id } = req.params;
+  const { body } = req;
+  try {
+    const oldProduct = await productServices.getById(id);
+    const updateProduct = await productServices.updateProductById(id, body);
+    res.send(`El producto ${oldProduct}, fue actualizado por ${updateProduct}`);
+  } catch (error) {
+    clog(error);
+  }
+};

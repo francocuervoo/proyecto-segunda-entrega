@@ -8,19 +8,47 @@ class CartServices extends Services {
   }
 
   async getCarts() {
-    await this.getAll();
+    try {
+      carts = await this.getAll();
+      return carts;
+    } catch (error) {
+      {
+        clog(error);
+      }
+    }
   }
 
   async getCartById(id) {
-    await this.getById(id);
+    try {
+      cart = await this.getById(id);
+      return cart;
+    } catch (error) {
+      {
+        clog(error);
+      }
+    }
   }
 
   async createCart(cart) {
-    await this.createDocument(cart);
+    try {
+      await this.createDocument(cart);
+      return;
+    } catch (error) {
+      {
+        clog(error);
+      }
+    }
   }
 
   async deleteCartById(id) {
-    await this.deleteById(id);
+    try {
+      await this.deleteById(id);
+      return;
+    } catch (error) {
+      {
+        clog(error);
+      }
+    }
   }
 
   async deleteProduct(cartId, productId) {
@@ -29,7 +57,7 @@ class CartServices extends Services {
 
       //Métodos de Vnailla JS para borrar el producto del carrito
       const index = cart.products.findIndex(
-        (product) => (product._id == productId)
+        (product) => product._id == productId
       );
       cart.products.splice(index, 1);
 
