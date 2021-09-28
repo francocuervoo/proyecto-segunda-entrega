@@ -104,3 +104,6 @@ export const deleteProductFromCart = async (req, res) => {
     clog(error);
   }
 };
+
+
+//mongodb+srv://franco:****@cluster0.am596.mongodb.net/test?authSource=admin&replicaSet=atlas-4gunn1-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true
